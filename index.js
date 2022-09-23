@@ -10,6 +10,7 @@ const respond = function (res, { payload }) {
 app.get("/", (req, res) => {
   const payload = {
     message: "take me to your leader",
+    "one-last-thing": "think, different",
   };
   respond(res, { payload });
 });
