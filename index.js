@@ -1,4 +1,6 @@
 const express = require('express')
+const { gitDescribeSync } = require('git-describe')
+
 const app = express()
 const port = 4000
 
@@ -8,10 +10,9 @@ const respond = function (res, { payload }) {
 }
 
 app.get('/', (req, res) => {
-  const payload = {
-    message: 'take me to your leader',
-    'one-last-thing': 'think, different',
-  }
+  const message = 'take me to your leader'
+  const version = gitDescribeSync().hash
+  const payload = { message, version }
   respond(res, { payload })
 })
 

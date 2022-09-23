@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.1",
+    "git-describe": "^4.1.1",
     "tplink-smarthome-api": "^4.2.0"
   },
   "devDependencies": {
